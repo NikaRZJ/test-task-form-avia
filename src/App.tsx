@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { useState } from 'react';
 import './App.css';
+import FormPage from './pages/FormPage';
+import InfoPage from './pages/InfoPage';
+
+export interface DataProps {
+    fromCity: string,
+    toCity: string,
+    thereDate: string,
+    backDate: string
+}
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [fromCity, setFromCity] = useState<string>('');
+    const [toCity, setToCity] = useState<string>('');
+    const [thereDate, setThereDate] = useState<string>('');
+    const [backDate, setBackDate] = useState<string>('');
+
+    const getData = ({ fromCity, toCity, thereDate, backDate }: DataProps) => {
+        setFromCity(fromCity);
+        setToCity(toCity);
+        setThereDate(thereDate);
+        setBackDate(backDate);
+    }
+
+    return (
+        <BrowserRouter>
+            <div className='container'>
+                <Routes>
+                    <Route path={'/avia'} element={<FormPage getData={getData} />} />
+                    <Route path={'/avia/info'} element={<InfoPage data={{ fromCity: fromCity, toCity: toCity, thereDate: thereDate, backDate: backDate }} />} />
+                </Routes>
+            </div>
+        </BrowserRouter>
+    )
 }
 
 export default App;

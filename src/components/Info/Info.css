@@ -1,0 +1,148 @@
+.info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 790px;
+    height: 200px;
+    border-right: 1px solid #DDE3EE;
+}
+
+.info-flag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #8BA5D8;
+    color: white;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    padding: 6px 24px;
+    border-radius: 15px 0;
+    z-index: -1;
+}
+
+.info__s7-logo {
+    align-self: center;
+    text-align: center;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #5C5C5C;
+}
+
+.info-flight {
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.info-flight__time {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    /* text-align: center; */
+    color: #232323;
+    margin-bottom: 8px;
+}
+.info-flight__city-date {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #5C5C5C;
+}
+
+.info-flight__way {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    height: 56px;
+    position: relative;
+}
+
+.info-flight__airport {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    text-align: center;
+    color: #B7BAC1;
+}
+
+.info-flight__airport::before {
+    background-color: #C4C4C4;
+    border-radius: 500px;
+    content: "";
+    width: 8px;
+    height: 8px;
+    transform: translate(10px, 24px);
+    position: absolute;
+}
+
+.info-flight__airport::after {
+    border-bottom: solid 1px #B7BAC1;
+    content: '';
+    height: 1px;
+    top:27px;
+    left:17px;
+    width: 267px;
+    position: absolute;
+}
+
+.info-flight__way-time {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    text-align: center;
+    color: #B7BAC1;
+    align-self: flex-end;
+}
+
+.info-price {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    /* identical to box height */
+    text-align: center;
+    align-self: center;
+}
+
+.info-flight__block {
+    display: flex;
+    margin-top: 40px;
+}
+
+.time-selector {
+    cursor:pointer;
+    padding: 6px 6px 6px 3px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    /* identical to box height */
+    color: #5C5C5C;
+    border: 1px solid #B7BAC1;
+    border-radius: 10px;
+    text-align: center;
+    transition: background-color .2s ease-in-out, border .2s ease-in-out, transform .2s ease-in-out;
+}
+
+.time-selector__active {
+    background-color: #DDE3EE;
+    border: 0;
+    transform: scale(1.2);
+}
+
+.time-selector__end {
+    font-size: 14px;
+}
+
+.time {
+    display: flex;
+    justify-content: space-between;
+    width: 370px;
+    margin-right: 100px;
+}
