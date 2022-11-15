@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/avia/static/css/main.cc565f9c.css",
+    "main.js": "/avia/static/js/main.c17696d5.js",
+    "index.html": "/avia/index.html",
+    "main.cc565f9c.css.map": "/avia/static/css/main.cc565f9c.css.map",
+    "main.c17696d5.js.map": "/avia/static/js/main.c17696d5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cc565f9c.css",
+    "static/js/main.c17696d5.js"
+  ]
+}
